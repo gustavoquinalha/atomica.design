@@ -1,11 +1,114 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>Atomica.design</title>
-</head>
-<body>
+<html lang="en">
 
-<h1>Atomica.design</h1>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atomica.design</title>
+  <link href="https://fonts.googleapis.com/css?family=Vidaloka" rel="stylesheet">
+</head>
+
+<body>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Vidaloka', serif;
+    }
+
+    .container {
+      width: 100%;
+      min-height: 100vh;
+      box-sizing: border-box;
+      background: red;
+      display: flex;
+      font-size: 10vw;
+      overflow: hidden;
+    }
+
+    .left,
+    .right {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    .left {
+      justify-content: flex-end;
+      background: #E86007;
+      color: #003D88;
+    }
+
+    .left:after,
+    .right:after,
+    .left:before,
+    .right:before {
+      z-index: 10;
+      position: absolute;
+      border-radius: 50%;
+    }
+
+    .left:after {
+      content: "";
+      width: 30vw;
+      height: 30vw;
+      background: #003D88;
+      left: -15vw;
+      top: -15vw;
+    }
+
+    .left:before {
+      content: "";
+      width: 2vw;
+      height: 2vw;
+      background: #fff;
+      left: 5vw;
+      top: 5vw;
+      z-index: 20;
+      box-shadow: 4vw 0 #fff, 8vw 0 #fff, 12vw 0 #fff, 16vw 0 #fff,
+        0 4vw #fff, 4vw 4vw #fff, 8vw 4vw #fff, 12vw 4vw #fff, 16vw 4vw #fff,
+        0vw 8vw #fff, 4vw 8vw #fff, 8vw 8vw #fff, 12vw 8vw #fff, 16vw 8vw #fff;
+    }
+
+    .right {
+      justify-content: flex-start;
+      background: #004425;
+      color: #CF5E86;
+    }
+
+    .right:after {
+      content: "";
+      width: 20vw;
+      height: 20vw;
+      background: #CF5E86;
+      right: -10vw;
+      bottom: -10vw;
+    }
+
+    .right:before {
+      content: "";
+      width: 40vw;
+      height: 40vw;
+      border: 5px solid #CF5E86;
+      right: -20vw;
+      bottom: -20vw;
+    }
+
+    .right span {
+      position: relative;
+      box-shadow: 0 2vw #c3bdeb;
+    }
+  </style>
+
+  <div class="container">
+    <div class="left">
+      <span>Atomica</span>
+    </div>
+    <div class="right">
+      <span>.design</span>
+    </div>
+  </div>
 
 </body>
+
 </html>
